@@ -40,7 +40,6 @@ function Gallery() {
   const [searchTags, setSearchTags] = useState("");
   const [filteredImages, setFilteredImages] = useState([]);
   const [draggedImageIndex, setDraggedImageIndex] = useState(null);
-  const container = `container ${loading ? "skeleton-loader" : "image-grid"}`;
 
   const navigate = useNavigate();
 
@@ -52,6 +51,7 @@ function Gallery() {
       })
       .catch((error) => {});
   };
+  console.log(loading);
 
   const handleTagInputChange = (e) => {
     setSearchTags(e.target.value);
@@ -95,6 +95,7 @@ function Gallery() {
         }
 
         const data = await response.json();
+
         setImages(data.hits || []);
       } catch (error) {
         console.error("Error fetching images:", error);

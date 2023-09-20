@@ -18,7 +18,7 @@
   font-size: 34px;
   font-style: normal;
   font-weight: 900;
-  line-height: 43px; /* 119.444% */
+  line-height: 43px;
   margin-bottom: 36px;
 }
 
@@ -63,8 +63,10 @@ input[type="text"] {
 .image-card {
   border: 1px solid #ddd;
   border-radius: 8px;
+  background: #e0e0e0;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
+  animation: loading 1.5s infinite;
 }
 
 .image-card:hover {
