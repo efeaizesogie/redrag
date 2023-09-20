@@ -1,23 +1,21 @@
-.login {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #1d1d1d;
-}
-
 .gallery {
   text-align: center;
   padding: 20px;
+  background: #1d1d1d;
+  font-family: "Gilroy";
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .gallery h1 {
   flex-shrink: 0;
   color: #fff;
-  font-family: "Gilroy";
-  font-size: 36px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 900;
   line-height: 43px; /* 119.444% */
@@ -26,7 +24,25 @@
 
 h1 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-size: 18px;
+  color: #fff;
+}
+
+.logo span {
+  color: #ff4b26;
+}
+
+.logout {
+  font-size: 18px;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 15px;
+  background: #ff4b26;
+  cursor: pointer;
 }
 
 input[type="text"] {
@@ -36,14 +52,6 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-}
-
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  font-size: 20px;
 }
 
 .image-grid {
@@ -65,7 +73,7 @@ input[type="text"] {
 
 .image-card img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .image-details {
@@ -90,4 +98,49 @@ input[type="text"] {
 .description {
   font-size: 14px;
   color: #333;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 20px;
+}
+
+.image-card.skeleton-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 20px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.image-card.skeleton-card .skeleton-loader {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .gallery h1 {
+    font-size: 26px;
+  }
 }
