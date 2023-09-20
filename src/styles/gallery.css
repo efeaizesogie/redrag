@@ -1,0 +1,93 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #1d1d1d;
+}
+
+.gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery h1 {
+  flex-shrink: 0;
+  color: #fff;
+  font-family: "Gilroy";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 43px; /* 119.444% */
+  margin-bottom: 36px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.image-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+
+.image-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-details {
+  padding: 16px;
+}
+
+.tags {
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 4px;
+  background: #ff4b26;
+  box-shadow: 0px 10px 26px 0px rgba(231, 96, 71, 0.47);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.description {
+  font-size: 14px;
+  color: #333;
+}
